@@ -2,8 +2,8 @@ name: Send Email Every 5 Minutes
 
 on:
   schedule:
-    # 5분마다 실행
-    - cron: "*/5 * * * *"
+    # 2분마다 실행
+    - cron: "*/2 * * * *"
   workflow_dispatch: # 수동 트리거 추가
 jobs:
   send-email:
