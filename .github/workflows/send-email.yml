@@ -1,9 +1,12 @@
 name: Send Email Every 5 Minutes
 
 on:
+  push: # push 이벤트 추가
+    branches:
+      - main # main 브랜치에 push할 때 트리거
   schedule:
     # 2분마다 실행
-    - cron: "*/2 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch: # 수동 트리거 추가
 jobs:
   send-email:
